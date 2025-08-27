@@ -9,71 +9,95 @@
       font-family: 'Georgia', serif;
       margin: 0;
       padding: 0;
-      background-color: #fafafa;
+      background-color: #f4f4f4;
       color: #333;
     }
     header {
-      background-color: #2c3e50;
+      background-color: #0755a2;
       color: white;
-      padding: 20px;
+      padding: 30px;
       text-align: center;
       font-size: 24px;
     }
+    header p {
+      font-size: 16px;
+      margin-top: 10px;
+    }
     .container {
       width: 80%;
-      margin: 20px auto;
+      margin: 10px auto;
     }
+    /* 照片设置为方形 */
     .photo-container {
       display: flex;
       justify-content: flex-start;
-      margin-bottom: 20px;
+      margin-bottom: 40px;
     }
     .photo-container img {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
+      width: 140px;
+      height: 200px;
       margin-right: 20px;
+      border-radius: 5px;
     }
     h1 {
       font-size: 36px;
-      margin-top: 20px;
       text-align: center;
+      color: #ffffff;
+      margin-top: 20px;
     }
     h2 {
       font-size: 28px;
-      color: #2c3e50;
-      margin-top: 40px;
+      color: #2C3E50;
+      margin-top: 20px;
     }
     p {
       font-size: 18px;
-      line-height: 1.6;
+      line-height: 1.8;
+      margin-bottom: 20px;
     }
     .section {
       margin-top: 40px;
       margin-bottom: 40px;
+    }
+    .section h3 {
+      font-size: 24px;
+      color: #0f8bdd;
+      margin-bottom: 20px;
     }
     .section ul {
       list-style-type: none;
       padding-left: 0;
     }
     .section ul li {
-      margin-bottom: 10px;
+      margin-bottom: 15px;
       font-size: 18px;
-      line-height: 1.6;
     }
-    .section h3 {
-      font-size: 24px;
-      color: #2c3e50;
+    .section ul li strong {
+      color: #150107;
     }
     footer {
-      background-color: #2c3e50;
+      background-color: #2a537d;
       color: white;
       text-align: center;
       padding: 10px 20px;
       font-size: 14px;
-      position: fixed;
-      bottom: 0;
-      width: 100%;
+    }
+    /* 样式改进分栏部分 */
+    .resume-info {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 30px;
+    }
+    .resume-info > div {
+      width: 48%;
+    }
+    /* 修改通讯地址和联系电话部分为单行显示 */
+    .resume-info .address,
+    .resume-info .phone {
+      white-space: nowrap; /* 防止换行 */
+      overflow: hidden; /* 内容超出时隐藏 */
+      text-overflow: ellipsis; /* 内容溢出时用省略号显示 */
     }
   </style>
 </head>
@@ -81,6 +105,7 @@
 
   <header>
     <h1>Qimin Yuan's Academic Profile</h1>
+    <p>Qimin Yuan | Zhejiang University | Contact: your-email@example.com</p>
     <p>Welcome to my academic page. Here you can find my research work, publications, and achievements.</p>
   </header>
 
@@ -90,12 +115,29 @@
       <img src="resumephoto.jpg" alt="Qimin Yuan">
       <div>
         <h2>袁启民 (Qimin Yuan)</h2>
-        <p><strong>通讯地址：</strong>浙江省杭州市西湖区余杭塘路866号</p>
-        <p><strong>联系电话：</strong>15700199929</p>
-        <p><strong>本人简介：</strong>2021年在南昌大学获得通信工程学士学位，2021年保研入学微纳电子学院就读硕士，2022-2025年于浙江大学集成电路学院硕博连读，2020年10月-2024年5月朔天科技有限公司数字芯片研发实习，2024年6月-2025年9月于浙大超大规模电路实验室（ZVS-lab）研究多芯粒Chiplet系统技术研究，参与国家重点项目科研两项，supported by the SmartGrid-National Science and Technology Major Project(2025ZD0804005) Program of Beijing Huairou Laboratory（ZD2023021A）。</p>
+        <div class="resume-info">
+          <div>
+            <p><strong>通讯地址：</strong><span class="address">浙江省杭州市西湖区余杭塘路866号</span></p>
+            <p><strong>联系电话：</strong><span class="phone">15700199929</span></p>
+          </div>
+        </div>
       </div>
     </div>
 
+    <!-- Biography -->
+    <section class="section">
+      <h3>Biography</h3>
+      <p>目前在浙江大学集成电路学院攻读硕博连读，专注于数字集成电路系统的研究。</p>
+      <p>2021年毕业于南昌大学，获得通信工程学士学位，并保研至浙江大学微纳电子学院攻读硕士学位。2022-2025年于浙江大学集成电路学院硕博连读，致力于多芯粒系统及芯片安全相关技术的研究，参与国家重点项目两项，SmartGrid-National Science and Technology Major Project（2025ZD0804005）and Program of Beijing Huairou Laboratory（ZD2023021A）。</p>
+    </section>
+
+    <!-- Project -->
+    <section class="section">
+      <h3>Project</h3>
+      <p>2020年10月-2024年05月，朔天科技有限公司数字芯片研发实习。</p>
+      <p>2024年06月-2025年09月，浙江大学超大规模电路实验室（ZVS-lab）进行多芯粒Chiplet系统技术的研究。</p>
+        
+    </section>
     <!-- 论文 -->
     <section class="section">
       <h3>Publications</h3>
@@ -109,8 +151,8 @@
     <section class="section">
       <h3>Patents</h3>
       <ul>
-        <li><strong>CN120163100A</strong> Multi-chip System Cost Quantification and Optimization Method, under examination, 2025</li>
-        <li><strong>CN117251890A</strong> Security Chip Protection Device and Method Based on Active Shielding Layer, under examination, 2023</li>
+        <li><strong>CN120163100A</strong> 一种多芯粒系统成本量化分析与优化方法，实审中，2025</li>
+        <li><strong>CN117251890A</strong> 一种基于主动屏蔽层的安全芯片防护装置及方法，实审中，2023</li>
       </ul>
     </section>
 
@@ -125,4 +167,12 @@
         <li>Second Prize, PingTouGe Special Award, 5th China Graduate "Chip" Contest, 2022</li>
         <li>Zhejiang University Integrated Circuit School PhD Qualification, 2021</li>
       </ul>
-    </s
+    </section>
+  </div>
+
+  <footer>
+    <p>Qimin Yuan | Zhejiang University</p>
+  </footer>
+
+</body>
+</html>
