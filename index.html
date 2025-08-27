@@ -23,6 +23,17 @@
       width: 80%;
       margin: 20px auto;
     }
+    .photo-container {
+      display: flex;
+      justify-content: flex-start;
+      margin-bottom: 20px;
+    }
+    .photo-container img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      margin-right: 20px;
+    }
     h1 {
       font-size: 36px;
       margin-top: 20px;
@@ -36,15 +47,6 @@
     p {
       font-size: 18px;
       line-height: 1.6;
-    }
-    .photo {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      margin: 20px 0;
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
     }
     .section {
       margin-top: 40px;
@@ -83,14 +85,16 @@
   </header>
 
   <div class="container">
-    <!-- 个人照片 -->
-    <img src="resumephoto.jpg" alt="Qimin Yuan" class="photo">
-
-    <!-- 个人简介 -->
-    <section class="section">
-      <h2>Biography</h2>
-      <p>I am currently a graduate student at Zhejiang University, focusing on integrated circuit design, chip security, and cost optimization. My research spans multiple technology nodes, architecture optimization, and RISC-V based system-on-chip design.</p>
-    </section>
+    <!-- 个人照片和简历基础信息 -->
+    <div class="photo-container">
+      <img src="resumephoto.jpg" alt="Qimin Yuan">
+      <div>
+        <h2>袁启民 (Qimin Yuan)</h2>
+        <p><strong>通讯地址：</strong>浙江省杭州市西湖区余杭塘路866号</p>
+        <p><strong>联系电话：</strong>15700199929</p>
+        <p><strong>本人简介：</strong>2021年在南昌大学获得通信工程学士学位，2021年保研入学微纳电子学院就读硕士，2022-2025年于浙江大学集成电路学院硕博连读，2020年10月-2024年5月朔天科技有限公司数字芯片研发实习，2024年6月-2025年9月于浙大超大规模电路实验室（ZVS-lab）研究多芯粒Chiplet系统技术研究，参与国家重点项目科研两项，supported by the SmartGrid-National Science and Technology Major Project(2025ZD0804005) Program of Beijing Huairou Laboratory（ZD2023021A）。</p>
+      </div>
+    </div>
 
     <!-- 论文 -->
     <section class="section">
@@ -121,12 +125,4 @@
         <li>Second Prize, PingTouGe Special Award, 5th China Graduate "Chip" Contest, 2022</li>
         <li>Zhejiang University Integrated Circuit School PhD Qualification, 2021</li>
       </ul>
-    </section>
-  </div>
-
-  <footer>
-    <p>Qimin Yuan | Zhejiang University | Contact: your-email@example.com</p>
-  </footer>
-
-</body>
-</html>
+    </s
