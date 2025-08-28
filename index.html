@@ -25,12 +25,13 @@
     }
     .container {
       width: 80%;
-      margin: 10px auto;
+      margin: 0px auto;
     }
     /* 照片设置为方形 */
     .photo-container {
       display: flex;
       justify-content: flex-start;
+      margin-top: 20px;
       margin-bottom: 40px;
     }
     .photo-container img {
@@ -47,12 +48,12 @@
     }
     h2 {
       font-size: 28px;
-      color: #2C3E50;
-      margin-top: 20px;
+      color: #000204;/* 姓名颜色 */
+      margin-top: 10px;
     }
     p {
       font-size: 18px;
-      line-height: 1.8;
+      line-height: 1.35;/*地址和电话的行距*/
       margin-bottom: 20px;
     }
     .section {
@@ -76,7 +77,7 @@
       color: #150107;
     }
     footer {
-      background-color: #2a537d;
+      background-color: #0755a2;
       color: white;
       text-align: center;
       padding: 10px 20px;
@@ -90,7 +91,7 @@
       gap: 30px;
     }
     .resume-info > div {
-      width: 48%;
+      width: 100%;
     }
     /* 修改通讯地址和联系电话部分为单行显示 */
     .resume-info .address,
@@ -105,8 +106,8 @@
 
   <header>
     <h1>Qimin Yuan's Academic Profile</h1>
-    <p>Qimin Yuan | Zhejiang University | Contact: your-email@example.com</p>
-    <p>Welcome to my academic page. Here you can find my research work, publications, and achievements.</p>
+    <p>College of Integrated Circuits | Zhejiang University | Hangzhou, China</p>
+    <p>Welcome to my academic page. Here you can find my project and research work, publications, and honors.</p>
   </header>
 
   <div class="container">
@@ -117,9 +118,9 @@
         <h2>袁启民 (Qimin Yuan)</h2>
         <div class="resume-info">
           <div>
-            <p><strong>通讯地址：</strong><span class="address">浙江省杭州市西湖区余杭塘路866号</span></p>
-            <p><strong>联系电话：</strong><span class="phone">15700199929</span></p>
-            <p><strong>联系邮箱：</strong><span class="email">qmy@zju.edu.cn</span></p>
+            <p><strong>地址：</strong><span class="address">浙江省杭州市西湖区余杭塘路866号</span></p>
+            <p><strong>电话：</strong><span class="phone">13870998901</span></p>
+            <p><strong>邮箱：</strong><span class="email">qmyuan@zju.edu.cn</span></p>
           </div>
         </div>
       </div>
@@ -128,17 +129,74 @@
     <!-- Biography -->
     <section class="section">
       <h3>Biography</h3>
-      <p>目前在浙江大学集成电路学院攻读硕博连读，专注于数字集成电路系统的研究。</p>
-      <p>2021年毕业于南昌大学，获得通信工程学士学位，并保研至浙江大学微纳电子学院攻读硕士学位。2022-2025年于浙江大学集成电路学院硕博连读，致力于多芯粒系统及芯片安全相关技术的研究，参与国家重点项目两项，SmartGrid-National Science and Technology Major Project（2025ZD0804005）and Program of Beijing Huairou Laboratory（ZD2023021A）。</p>
+      <p>浙江大学集成电路学院硕博连读五年级，专注于数字集成电路系统设计与硬件安全研究。</p>
+      <p>2021年毕业于南昌大学，获通信工程学士学位，并保研至浙江大学集成电路学院攻读硕士学位。2022-2025年于浙江大学集成电路学院硕博连读，研究多芯粒系统及芯片安全相关课题，参与国家重点项目两项: SmartGrid-National Science and Technology Major Project（2025ZD0804005）and Program of Beijing Huairou Laboratory（ZD2023021A）。</p>
     </section>
 
-    <!-- Project -->
-    <section class="section">
-      <h3>Project</h3>
-      <p>2020年10月-2024年05月，朔天科技有限公司数字芯片研发实习。</p>
-      <p>2024年06月-2025年09月，浙江大学超大规模电路实验室（ZVS-lab）进行多芯粒Chiplet系统技术的研究。</p>
-        
-    </section>
+<!-- Project -->
+<section class="section">
+  <h3>Project</h3>
+  
+<p style="color: rgb(255, 119, 0);"><span>&#x25B6;</span> <strong>2020年10月-2024年05月，朔天科技有限公司数字芯片研发实习</strong></p>
+<p style="color: black; margin-top: 0; margin-bottom: 10px;">在朔天科技有限公司的数字芯片研发实习期间，任职芯片设计前端岗位，参与多项流片SoC设计与验证项目。</p>
+
+
+  <ul>
+    <li>
+      <strong>集成气体传感器的专用SoC项目，NEXCHIP110nm流片，2023</strong>
+      <br>作为项目负责人带领3人团队完成项目，我负责架构设计（总线架构与时钟复位架构），时钟复位管理模块RCC设计，以及ADC Controller设计。
+    </li>
+    <li>
+      <strong>防御侵入式探针物理攻击的主动防护层电路设计，FIB测试防护层，2023</strong>
+      <br>设计了哈密顿回路CM算法生成主动屏蔽层，该屏蔽层布线具有隐蔽性和高随机性。结合所设计入侵检测硬件模块以抵抗芯片FIB攻击，成功检测FIB注入测试并增加切割难度。主动防护层电路装置与算法申请发明专利一项。
+    </li>
+    <li>
+      <strong>Kunpeng7测试芯片，SIMC40nm流片，2022</strong>
+      <br>负责项目整体集成与架构修改工作，提出NVMC测试方案并进行前仿与门仿。
+    </li>
+    <li>
+      <strong>打印机耗材芯片，FPGA bit流仿真，2022</strong>
+      <br>负责CortexM0内核集成与SoC架构集成，验证外设APB IP(Timer,WDT,UART,I2C,GPIO)仿真。
+    </li>
+    <li>
+      <strong>Kunpeng9测试芯片，HUALI55nm流片，2022</strong>
+      <br>负责仿真环境搭建与SoC集成，该项目集成了Cortex-M3内核。完成NVMC仿真验证并进行代码覆盖率分析。
+    </li>
+    <li>
+      <strong>基于开源E902处理器构建双核TEE系统设计，2021</strong>
+      <br>基于TEE安全架构原型，提出一个内存逻辑隔离保护的安全子系统架构，支持安全核能进行通用加解密，签名验签操作保障双核系统安全启动流程。
+    </li>
+    <li>
+      <strong>BAIHU嵌入式SoC芯片设计，SMIC55nm流片，2021</strong>
+      <br>作为项目负责人，该项目中学习仿真环境与SoC设计开发流程，负责SoC集成与DC综合分析。仿真方面负责Testbench仿真环境搭建，NVMC与CLKGEN功能验证，门级仿真与FPGA调试。学习Spec, Testplan, UG文档规范编写。
+    </li>
+    <li>
+      <strong>HASH消息摘要计算硬件IP设计，2021</strong>
+      <br>开发SHA-1, SHA-256, SHA-512, MD5，SM3哈希摘要算法硬件IP，极大程度复用电路资源。
+    </li>
+    <li>
+      <strong>存储访问控制器IP设计SRAM Controller，2020</strong>
+      <br>设计SRAM控制器IP，确保AHB总线协议正确读写SRAM存储数据。
+    </li>
+  </ul>
+
+  <p style="color: rgb(255, 119, 0);"><span>&#x25B6;</span> <strong>2024年06月-2025年09月，浙江大学超大规模电路实验室（ZVS-lab）进行多芯粒Chiplet系统技术的研究</strong></p>
+  <p>在浙江大学的超大规模电路实验室进行多芯粒Chiplet系统技术的研究，致力于探索新型芯片架构和成本优化模型，为未来芯片技术的创新奠定基础。</p>
+
+  <ul>
+    <li>
+      <strong>多芯粒系统成本评估模型研发，2024</strong>
+      <br>研发多芯粒系统的成本评估模型，分析系统切分粒度、工艺节点选择、与封装类型各复杂参数，寻找最优的成本方案。成果于2025年发表在EDA四大顶会之一的ICCAD国际会议。
+    </li>
+    <li>
+      <strong>有源中介层Active Interposer项目，SMIC55nm工艺流片，2025</strong>
+      <br>设计安全有源中介层架构与防御机制，从启动阶段到运行阶段抵御软硬件攻击。并构建了由4个MCU Chiplet与Secure Interposer构成的原型系统，其中MCU与Interposer均采用SMIC55nm工艺流片，最后系统封装采用2.5D堆叠封装。
+    </li>
+  </ul>
+</section>
+
+
+
     <!-- 论文 -->
     <section class="section">
       <h3>Publications</h3>
