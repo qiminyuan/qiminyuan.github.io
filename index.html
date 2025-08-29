@@ -120,7 +120,20 @@
       overflow: hidden; /* 内容超出时隐藏 */
       text-overflow: ellipsis; /* 内容溢出时用省略号显示 */
     }
-    
+  /* 确保个人简历部分的文字可以正常换行 */
+.bio-list li {
+  display: flex;
+  flex-wrap: wrap;  /* 允许文字内容换行 */
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 12px;
+  font-size: 18px;
+  line-height: 1.5;
+  word-wrap: break-word; /* 允许长词换行 */
+  overflow-wrap: break-word; /* 确保长词在容器内换行 */
+  max-width: 100%; /* 确保每项内容不会超出容器宽度 */
+}
+
   /* 全局响应式布局设置 */
   @media (max-width: 768px) {
     /* 修改整体页面的字体大小，以便在小屏幕上更易读 */
@@ -170,20 +183,6 @@
   list-style: none;
   padding-left: 0;
 }
-
-    .bio-list li {
-      display: flex;
-      align-items: flex-start;
-      gap: 10px;
-      margin-bottom: 12px;
-      font-size: 18px;
-      line-height: 1.5;
-    }
-
-    .bio-list li span {
-      flex-shrink: 0;
-    }
-  }
 
   /* 确保图片适应屏幕宽度 */
   img {
