@@ -1,6 +1,25 @@
 <!DOCTYPE html>
 <html lang="zh">
 <head>
+
+  <!-- Open Graph 协议 -->
+  <meta property="og:title" content="预览标题">
+  <meta property="og:description" content="预览描述">
+  <meta property="og:image:width" content="图片宽度">
+  <meta property="og:image:height" content="图片高度">
+  <meta property="og:image" content="预览图片的URL">
+  <meta property="og:url" content="链接的URL">
+  
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="预览标题">
+  <meta name="twitter:description" content="预览描述">
+  <meta property="twitter:image:width" content="图片宽度">
+  <meta property="twitter:image:height" content="图片高度">
+  <meta name="twitter:image" content="预览图片的URL">
+  <meta name="twitter:url" content="链接的URL">
+
+  
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Qimin Yuan's Academic Profile</title>
@@ -101,73 +120,73 @@
       text-overflow: ellipsis; /* 内容溢出时用省略号显示 */
     }
     
-/* 全局响应式布局设置 */
-@media (max-width: 768px) {
-  /* 修改整体页面的字体大小，以便在小屏幕上更易读 */
-  body {
-    font-size: 16px;
-  }
-  /* header部分的内边距减少，以适应小屏幕 */
-  header {
-    padding: 10px;
-  }
-  /* 使container占据更多的屏幕宽度，提供更大的可用空间 */
-  .container {
-    width: 90%;
-  }
-  /* 调整图片容器布局，使其在小屏幕上垂直排列 */
-  .photo-container {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-  /* 修改图片的大小和间距，使其在小屏幕上更加紧凑 */
-  .photo-container img {
-    width: 120px;
-    height: 170px;
-    margin-bottom: 15px;
-  }
-  /* 修改简历信息的布局，使其在小屏幕上能够竖直排列 */
-  .resume-info {
-    display: block;
+  /* 全局响应式布局设置 */
+  @media (max-width: 768px) {
+    /* 修改整体页面的字体大小，以便在小屏幕上更易读 */
+    body {
+      font-size: 16px;
+    }
+    /* header部分的内边距减少，以适应小屏幕 */
+    header {
+      padding: 10px;
+    }
+    /* 使container占据更多的屏幕宽度，提供更大的可用空间 */
+    .container {
+      width: 90%;
+    }
+    /* 调整图片容器布局，使其在小屏幕上垂直排列 */
+    .photo-container {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    /* 修改图片的大小和间距，使其在小屏幕上更加紧凑 */
+    .photo-container img {
+      width: 120px;
+      height: 170px;
+      margin-bottom: 15px;
+    }
+    /* 修改简历信息的布局，使其在小屏幕上能够竖直排列 */
+    .resume-info {
+      display: block;
+    }
+
+    /* 调整section标题的字体大小，使其适应小屏幕 */
+    .section h3 {
+      font-size: 20px;
+    }
+
+    /* 调整列表项的字体大小，使其适应小屏幕 */
+    .section ul li {
+      font-size: 16px;
+    }
+
+    /* footer部分的内边距减少，使其适应小屏幕 */
+    footer {
+      padding: 10px;
+    }
   }
 
-  /* 调整section标题的字体大小，使其适应小屏幕 */
-  .section h3 {
-    font-size: 20px;
+  /* 确保图片适应屏幕宽度 */
+  img {
+    max-width: 100%; /* 图片最大宽度为100% */
+    height: auto;    /* 保持图片的纵横比 */
   }
 
-  /* 调整列表项的字体大小，使其适应小屏幕 */
-  .section ul li {
-    font-size: 16px;
+  /* 确保每一栏内容显示合理，避免过长的文字溢出 */
+  .address,
+  .phone,
+  .email {
+    word-wrap: break-word;  /* 当文字超出容器时自动换行 */
+    white-space: normal;    /* 防止文字在单行内溢出 */
   }
 
-  /* footer部分的内边距减少，使其适应小屏幕 */
-  footer {
-    padding: 10px;
+  /* 优化表单输入区域，使其在小屏幕上能完全展开 */
+  input, textarea {
+    width: 100%;           /* 使输入框和文本框占据100%的宽度 */
+    padding: 20px;         /* 添加适当的内边距 */
+    box-sizing: border-box; /* 确保内边距被包含在元素的总宽度内 */
   }
-}
-
-/* 确保图片适应屏幕宽度 */
-img {
-  max-width: 100%; /* 图片最大宽度为100% */
-  height: auto;    /* 保持图片的纵横比 */
-}
-
-/* 确保每一栏内容显示合理，避免过长的文字溢出 */
-.address,
-.phone,
-.email {
-  word-wrap: break-word;  /* 当文字超出容器时自动换行 */
-  white-space: normal;    /* 防止文字在单行内溢出 */
-}
-
-/* 优化表单输入区域，使其在小屏幕上能完全展开 */
-input, textarea {
-  width: 100%;           /* 使输入框和文本框占据100%的宽度 */
-  padding: 20px;         /* 添加适当的内边距 */
-  box-sizing: border-box; /* 确保内边距被包含在元素的总宽度内 */
-}
 
   </style>
 </head>
