@@ -120,19 +120,26 @@
       overflow: hidden; /* 内容超出时隐藏 */
       text-overflow: ellipsis; /* 内容溢出时用省略号显示 */
     }
-  /* 确保个人简历部分的文字可以正常换行 */
-.bio-list li {
-  display: flex;
-  flex-wrap: wrap;  /* 允许文字内容换行 */
-  align-items: flex-start;
-  gap: 10px;
-  margin-bottom: 12px;
-  font-size: 18px;
-  line-height: 1.5;
-  word-wrap: break-word; /* 允许长词换行 */
-  overflow-wrap: break-word; /* 确保长词在容器内换行 */
-  max-width: 100%; /* 确保每项内容不会超出容器宽度 */
-}
+
+    /* 确保个人简历部分的文字可以正常换行 */
+    .bio-list li {
+      display: flex;
+      flex-wrap: wrap;  /* 允许文字内容换行 */
+      align-items: flex-start;
+      gap: 10px;
+      margin-bottom: 12px;
+      font-size: 18px;
+      line-height: 1.5;
+      word-wrap: break-word; /* 允许长词换行 */
+      overflow-wrap: break-word; /* 确保长词在容器内换行 */
+      max-width: 100%; /* 确保每项内容不会超出容器宽度 */
+      word-break: break-all; /* 强制单词在任意位置断开 */
+    }
+
+    /* 解决文本溢出问题：父容器可选择隐藏溢出或允许横向滚动 */
+    .bio-list {
+      overflow: hidden; /* 隐藏溢出内容 */
+    }
 
   /* 全局响应式布局设置 */
   @media (max-width: 768px) {
@@ -179,31 +186,27 @@
     footer {
       padding: 10px;
     }
-    .bio-list {
-  list-style: none;
-  padding-left: 0;
-}
 
-  /* 确保图片适应屏幕宽度 */
-  img {
-    max-width: 100%; /* 图片最大宽度为100% */
-    height: auto;    /* 保持图片的纵横比 */
-  }
+    /* 确保图片适应屏幕宽度 */
+    img {
+      max-width: 100%; /* 图片最大宽度为100% */
+      height: auto;    /* 保持图片的纵横比 */
+    }
 
-  /* 确保每一栏内容显示合理，避免过长的文字溢出 */
-  .address,
-  .phone,
-  .email {
-    word-wrap: break-word;  /* 当文字超出容器时自动换行 */
-    white-space: normal;    /* 防止文字在单行内溢出 */
-  }
+    /* 确保每一栏内容显示合理，避免过长的文字溢出 */
+    .address,
+    .phone,
+    .email {
+      word-wrap: break-word;  /* 当文字超出容器时自动换行 */
+      white-space: normal;    /* 防止文字在单行内溢出 */
+    }
 
-  /* 优化表单输入区域，使其在小屏幕上能完全展开 */
-  input, textarea {
-    width: 100%;           /* 使输入框和文本框占据100%的宽度 */
-    padding: 20px;         /* 添加适当的内边距 */
-    box-sizing: border-box; /* 确保内边距被包含在元素的总宽度内 */
-  }
+    /* 优化表单输入区域，使其在小屏幕上能完全展开 */
+    input, textarea {
+      width: 100%;           /* 使输入框和文本框占据100%的宽度 */
+      padding: 20px;         /* 添加适当的内边距 */
+      box-sizing: border-box; /* 确保内边距被包含在元素的总宽度内 */
+    }
 
   </style>
 </head>
